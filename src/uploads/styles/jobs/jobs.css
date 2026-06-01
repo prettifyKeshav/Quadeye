@@ -1,0 +1,107 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.jobs-banner::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 27.18%, rgba(0, 0, 0, 0.7) 81.88%);
+}
+.jobs-banner .bg-background .container .bg-wrapper {
+  text-align: center;
+}
+.jobs-banner .bg-background .container .bg-wrapper h1 {
+  margin: auto;
+  text-align: center;
+  max-width: 743px;
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 743px;
+  margin: 60px auto 0;
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid.form {
+  --labelbefore: var(--white);
+  --labelafter: var(--primary);
+  --borderbefore: var(--white);
+  --borderafter: var(--primary);
+  --labelfontbefore: 16px;
+  --labelfontafter: 14px;
+  --font: 500;
+  --inputsize: 42px;
+  --color: var(--primary);
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid .form-group {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid .form-group input {
+  color: white;
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid .btn {
+  margin: auto;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+}
+.jobs-banner .bg-background .container .bg-wrapper .form-grid .btn:hover {
+  color: var(--primary);
+}
+
+.JobsSecA .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 0;
+}
+.JobsSecA .flex-box aside {
+  max-width: 380px;
+  border: 1px solid #E5E5E5;
+  width: 100%;
+  height: 500px;
+}
+.JobsSecA .flex-box .card-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.JobsSecA .flex-box .card-grid .job-card {
+  border: 1px solid #E5E5E5;
+  height: 307px;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.JobsSecA .flex-box .card-grid .job-card .location {
+  display: flex;
+  gap: 10px;
+}
+.JobsSecA .flex-box .card-grid .job-card .location span {
+  display: inline-block;
+  line-height: 1;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+}
+.JobsSecA .flex-box .card-grid .job-card h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--black);
+  margin: 10px 0 15px 0;
+}
+.JobsSecA .flex-box .card-grid .job-card p {
+  font-size: 16px;
+  font-weight: 400;
+}/*# sourceMappingURL=jobs.css.map */
