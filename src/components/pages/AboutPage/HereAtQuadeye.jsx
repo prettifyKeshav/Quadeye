@@ -34,11 +34,7 @@ const HereAtQuadeye = () => {
                 <div className="container">
                     <div className="heading">
                         <h2>Here at Quadeye</h2>
-                        <p>
-                            We specialize in Quantitative Proprietary Trading. We,
-                            along with our sister concerns, have presence in
-                            multiple markets across global exchanges.
-                        </p>
+                        <p>We specialize in Quantitative Proprietary Trading. We, along with our sister concerns, have presence in multiple markets across global exchanges. Quadeye’s liquidity provision plays a vital role in the overall health and efficiency of the global financial markets, especially in times of market turbulence.</p>
                     </div>
 
                     <div className="row">

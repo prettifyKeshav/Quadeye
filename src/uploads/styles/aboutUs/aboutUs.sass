@@ -74,7 +74,7 @@
     .heading
         text-align: center
         max-width: 616px
-        margin: 0 auto 30px
+        margin: 0 auto 60px
         h2
             color: white    
             margin-bottom: 20px
@@ -160,16 +160,16 @@
                     height: 7px
             &:nth-child(1)
                 transform: rotate(-3.9deg)
-                z-index: 15
+                z-index: 3
                 @include media(991)
                     transform: none
             &:nth-child(2)
                 transform: rotate(3.9deg)
-                z-index: 10
+                z-index: 2
                 @include media(991)
                     transform: none
             &:nth-child(3)
-                z-index: 5
+                z-index: 1
                 transform: rotate(-9deg)
                 @include media(991)
                     transform: none
@@ -208,7 +208,7 @@
                 background: white
                 border-color: transparent
                 transform: none !important
-                z-index: 20
+                z-index: 3
                 @include media(1280)
                     width: 300px
                     height: 240px
@@ -244,7 +244,129 @@
                         text-align: center
               
 .about-secC
-    .bg-background 
+    height: calc( 100vh - var(--headerheight) )
+    &::before
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%)
+    .bg-background
         video
             margin-top: 0
+        .container
+            .bg-wrapper
+                h2
+                    font-weight: 600
+                    font-size: 48px
+                    line-height: 100%
+                    max-width: 642px
+                    margin-bottom: 30px
+                    color: $white
+                p
+                    font-weight: 400
+                    font-size: 24px
+                    line-height: 24px
+                .btn
+                    margin-top: 50px
+            .mouse-ico
+                display: none
             
+.about-secD
+    position: relative
+    z-index: 1
+    background: $white
+    padding: 50px 0 
+    .heading
+        text-align: center
+    .swiper-nav
+        justify-content: space-between
+        position: absolute
+        z-index: 2
+        width: 55%
+        top: 52%
+        left: 50%
+        transform: translate(-50%)
+        user-select: none
+        pointer-events: none
+        flex-direction: row
+        @include media(768)
+            display: none
+        button
+            width: 44px
+            height: 44px
+            box-shadow: 0px 2px 8px 0px #63636333
+            background: $white
+            border-radius: 50%
+            cursor: pointer
+            display: flex
+            justify-content: center
+            align-items: center
+            user-select: all
+            pointer-events: all
+            transition: 0.5s ease
+            &:hover
+                background: $primary
+                svg
+                    path
+                        stroke: white
+            svg
+                height: 30px
+                width: 30px
+
+    .swiper 
+        width: 100%
+        padding: 40px 0 40px
+        @include media(540)
+            padding: 20px 0 30px 0
+        .swiper-slide 
+            background-position: center
+            background-size: cover
+            width: 568px !important
+            height: 402px
+            border-radius: 10px
+            overflow: hidden
+            position: relative
+            @include media(540)
+                width: 228px !important
+                height: auto
+            figcaption
+                position: absolute
+                bottom: 10%
+                left: 50%
+                transform: translate(-50%)
+                h4
+                    font-weight: 600
+                    font-size: 24px
+                    text-align: center
+                    color: white
+                    transition: 0.5s ease
+                    opacity: 1
+            figure
+                width: 100%
+                height: 100%
+                line-height: 0
+                position: relative
+                transition: 0.5s ease
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 35%, rgba(0, 0, 0, 0) 85%)
+                    transition: 0.5s ease
+                    background: #0000001A
+                    backdrop-filter: blur(9.363636016845703px)
+                img 
+                    display: block
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    transition: 0.3s ease
+            &.swiper-slide-active
+                figure
+                    &::before
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 35%, rgba(0, 0, 0, 0) 85%)
+                        backdrop-filter: none
+            &.swiper-slide-prev,&.swiper-slide-next
+                figcaption
+                    h4
+                        opacity: 0

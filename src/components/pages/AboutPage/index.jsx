@@ -2,7 +2,8 @@ import Hero from '@/components/molecules/Hero'
 import React from 'react'
 import "@/uploads/styles/aboutUs/aboutUs.css"
 import AboutSec from './AboutSec'
-import HereAtQuadeye from './HereAtQuadeye' 
+import HereAtQuadeye from './HereAtQuadeye'
+import QuadeyeGlance from './QuadeyeGlance'
 
 const AboutPage = () => {
     return (
@@ -26,14 +27,15 @@ const AboutPage = () => {
                     imgHeight="626"
                     imgWidth="1028"
                     bannerClassName="about-secC"
-                    heading="Love solving challenging Maths & Programming problems?"
-                    description="You Will Love Working @ Quadeye."
+                    subHeading="Love solving challenging Maths & Programming problems?"
+                    description="You Will Love Working @ Quadeye"
                     slideTo="#about_secA"
-                    // sLinkAvalible
-                    // linkHref= "/"
-                    // linkText= "check all the openings"
+                    isLinkAvalible
+                    linkHref="/"
+                    linkText="check all the openings"
                 />
             </section>
+            <QuadeyeGlance />
         </>
     )
 }
