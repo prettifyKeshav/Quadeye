@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useModalStore } from '@/store/modelStore';
+import { useModalStore } from '../../../store/modelStore'; 
 
 export default function Overlay() {
     const isSearchOpen = useModalStore((state) => state.isSearchOpen);
