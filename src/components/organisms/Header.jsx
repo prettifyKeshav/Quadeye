@@ -17,12 +17,11 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="colB">
-
                     <ul>
                         <li> <Link href="/about-us" >Who We Are</Link> </li>
-                        <li> <Link href="" >Life at Quadeye</Link> </li>
-                        <li> <Link href="" >Insights</Link> </li>
-                        <li> <Link href="" >Contact Us</Link> </li>
+                        <li> <Link href="/career" >Life at Quadeye</Link> </li>
+                        <li> <Link href="/blogs" >Insights</Link> </li>
+                        <li> <Link href="/contact-us" >Contact Us</Link> </li>
 
                         <li className="has-dropdown">
                             <Link href="/" className="has-link">

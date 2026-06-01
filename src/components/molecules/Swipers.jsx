@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import BlogCard from "../pages/BlogPage/BlogCard";
 
 const Swipers = ({
     onSlideClick,
@@ -102,7 +103,7 @@ const Swipers = ({
                 >
                     {data.map((item, index) => (
                         <SwiperSlide key={index}>
-                            {swiperSlideCard === "MonthlyDonor" ? (<MonthlyDonorCard {...item} />) :
+                            {swiperSlideCard === "BlogCard" ? (<BlogCard {...item} />) :
                                 enableFancybox ? (
                                     <a href={item.figureImageSrc}
                                         data-fancybox={fancyboxGroup}

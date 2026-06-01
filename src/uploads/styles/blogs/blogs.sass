@@ -1,25 +1,137 @@
 @import '../_var'
 
-.blogs-banner
-    margin-top: var(--headerheight)
-    background: #F8ECE6
-    padding: 100px 0
-    text-align: center
-    h1
-        font-weight: 700
-        font-size: 48px
-        line-height: 1.1
-    p
-        font-weight: 400
-        font-size: 16px
-        line-height: 1.2 
-        text-align: center
-        max-width: 337px
-        margin: 15px auto 0
+#blog_secA,#blog_detail_secA
+    scroll-margin-top: var(--headerheight)
 
+.blogs-banner
+    &::before
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 23.31%, rgba(0, 0, 0, 0) 64.42%)
+    .bg-wrapper
+        text-align: center
+        bottom: 10%
+        h1,p
+            margin: auto
+     
 .blog-listing-grid
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 30px 20px
     padding: 50px 0
+    .blog-card
+        box-shadow: 0px 2px 8px 0px #63636333
+        border-radius: 8px
+        overflow: hidden
+        background: $white
+        &:hover
+            figure
+                img
+                    scale: 1.2
+        figure
+            overflow: hidden
+            line-height: 0
+            height: 254px
+            @include shine
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+                transition: 0.5s ease
+        figcaption
+            padding: 20px
+            h4
+                font-weight: 600
+                font-size: 18px
+                line-height: 24px
+                color: black
+                margin-bottom: 20px
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 24px
+                color: $text
 
+.blog-detail-banner
+    &::before
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 44.32%)
+    .bg-background 
+        .container 
+            .bg-wrapper
+                bottom: 10%
+                h2
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 24px
+                    color: white
+                    margin-bottom: 20px
+                h1
+                    font-weight: 600
+                    font-size: 32px
+                    line-height: 38px
+                    color: white
+
+.blog-detail-secA
+    padding: 60px 0 
+    max-width: 880px
+    margin: auto
+    .container
+        p
+            text-align: justify
+        h3
+            margin-bottom: 15px
+            font-weight: 600
+            font-size: 20px
+            color: black
+
+        figure
+            margin: 40px 0 
+            height: 443px
+            width: 100%
+            overflow: hidden
+            line-height: 0
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+.blog-detail-secB
+    padding: 0 0 50px 0 
+    .heading
+        text-align: center
+        margin-bottom: 40px
+    .swiper-group
+        .swiper
+            max-width: 97%
+    .more-blog-swiper
+        .blog-card
+            box-shadow: 0px 2px 8px 0px #63636333
+            border-radius: 8px
+            overflow: hidden
+            background: $white
+            display: inline-block
+            &:hover
+                figure
+                    img
+                        scale: 1.2
+            figure
+                overflow: hidden
+                line-height: 0
+                height: 254px
+                @include shine
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+                    transition: 0.5s ease
+            figcaption
+                padding: 20px
+                h4
+                    font-weight: 600
+                    font-size: 18px
+                    line-height: 24px
+                    color: black
+                    margin-bottom: 20px
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    color: $text
