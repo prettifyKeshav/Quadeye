@@ -151,7 +151,7 @@
   line-height: 1.1;
 }
 .career-secB .panorama-carousel {
-  --size: 380px;
+  --size: 320px;
   position: relative;
   width: 100%;
   height: var(--size);
@@ -165,7 +165,7 @@
 }
 .career-secB .panorama-carousel .slide {
   position: absolute;
-  width: calc(var(--size) * 0.75);
+  width: calc(var(--size) * 0.95);
   height: var(--size);
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);

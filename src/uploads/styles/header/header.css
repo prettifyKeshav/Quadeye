@@ -3230,7 +3230,7 @@ footer .bottom-footer .flex-box span {
 }
 .not-found-banner .content {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -3245,6 +3245,9 @@ footer .bottom-footer .flex-box span {
   margin: 0 auto 30px;
   font-size: 20px;
   max-width: 520px;
+}
+.not-found-banner .content .btn {
+  margin: 50px auto 0;
 }
 
 .ham-pop {
