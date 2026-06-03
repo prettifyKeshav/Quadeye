@@ -84,6 +84,7 @@
   font-weight: 600;
   color: var(--white);
   font-size: 18px;
+  margin-bottom: 15px;
 }
 .JobsSecA .flex-box aside .job-location .location-list {
   list-style: none;
@@ -100,9 +101,9 @@
   cursor: pointer;
 }
 .JobsSecA .flex-box aside .job-location .location-list li .custom-checkbox {
-  width: 18px;
-  height: 18px;
-  min-width: 18px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
   border-radius: 3px;
   background: var(--white);
   display: inline-block;
@@ -114,19 +115,19 @@
 }
 .JobsSecA .flex-box aside .job-location .location-list li .custom-checkbox.checked::after {
   content: "";
-  position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 5px;
-  height: 9px;
-  border: 2px solid #25ABE2;
+  border: 2px solid #25abe2;
   border-top: none;
   border-left: none;
+  width: 7px;
+  height: 11px;
+  position: absolute;
+  top: 3px;
+  left: 7px;
   transform: rotate(45deg);
 }
 .JobsSecA .flex-box aside .job-location .location-list li .location-label {
   color: var(--white);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   -webkit-user-select: none;
      -moz-user-select: none;

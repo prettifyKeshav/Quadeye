@@ -2459,6 +2459,7 @@ header .header-wrapper .colB ul li a {
   color: var(--text);
   transition: 0.5s ease;
   padding: 24px 0;
+  position: relative;
 }
 header .header-wrapper .colB ul li a:hover {
   color: var(--primary);

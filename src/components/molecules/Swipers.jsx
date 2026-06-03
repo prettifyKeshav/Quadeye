@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import BlogCard from "../pages/BlogPage/BlogCard";
+import WorkLifeCard from "../pages/CareerPage/WorkLifeCard";
+import TestimonalsCard from "../pages/CareerPage/TestimonalsCard";
 
 const Swipers = ({
     onSlideClick,
@@ -104,58 +106,60 @@ const Swipers = ({
                     {data.map((item, index) => (
                         <SwiperSlide key={index}>
                             {swiperSlideCard === "BlogCard" ? (<BlogCard {...item} />) :
-                                enableFancybox ? (
-                                    <a href={item.figureImageSrc}
-                                        data-fancybox={fancyboxGroup}
-                                        data-caption={item.caption || ""}
-                                        style={{ display: "block" }}
-                                        onClick={(e) => {
-                                            if (swiperInstance?.isDragging) {
-                                                e.preventDefault();
-                                            }
-                                        }}
-                                    >
-                                        <figure>
-                                            <Image
-                                                src={item.figureImageSrc}
-                                                width={imageWidth}
-                                                height={imageHeight}
-                                                alt="figure image"
-                                            />
-                                        </figure>
+                                swiperSlideCard === "WorkLifeCard" ? (<WorkLifeCard {...item} />) :
+                                    swiperSlideCard === "TestimonalsCard" ? (<TestimonalsCard {...item} />) :
+                                        enableFancybox ? (
+                                            <a href={item.figureImageSrc}
+                                                data-fancybox={fancyboxGroup}
+                                                data-caption={item.caption || ""}
+                                                style={{ display: "block" }}
+                                                onClick={(e) => {
+                                                    if (swiperInstance?.isDragging) {
+                                                        e.preventDefault();
+                                                    }
+                                                }}
+                                            >
+                                                <figure>
+                                                    <Image
+                                                        src={item.figureImageSrc}
+                                                        width={imageWidth}
+                                                        height={imageHeight}
+                                                        alt="figure image"
+                                                    />
+                                                </figure>
 
-                                        {(item.heading || item.description) && (
-                                            <figcaption>
-                                                {item.heading && <h4>{item.heading}</h4>}
-                                                {item.description && <p>{item.description}</p>}
-                                            </figcaption>
+                                                {(item.heading || item.description) && (
+                                                    <figcaption>
+                                                        {item.heading && <h4>{item.heading}</h4>}
+                                                        {item.description && <p>{item.description}</p>}
+                                                    </figcaption>
+                                                )}
+                                            </a>
+                                        ) : (
+                                            <>
+                                                <div
+                                                    onClick={() => onSlideClick?.(item)}
+                                                    className={activeTab === item.dataTab ? "active" : ""}
+                                                    style={{ cursor: "pointer" }}
+                                                >
+                                                    <figure>
+                                                        <Image
+                                                            src={item.figureImageSrc}
+                                                            width={imageWidth}
+                                                            height={imageHeight}
+                                                            alt="figure image"
+                                                        />
+                                                    </figure>
+
+                                                    {(item.heading || item.description) && (
+                                                        <figcaption>
+                                                            {item.heading && <h4>{item.heading}</h4>}
+                                                            {item.description && <p>{item.description}</p>}
+                                                        </figcaption>
+                                                    )}
+                                                </div>
+                                            </>
                                         )}
-                                    </a>
-                                ) : (
-                                    <>
-                                        <div
-                                            onClick={() => onSlideClick?.(item)}
-                                            className={activeTab === item.dataTab ? "active" : ""}
-                                            style={{ cursor: "pointer" }}
-                                        >
-                                            <figure>
-                                                <Image
-                                                    src={item.figureImageSrc}
-                                                    width={imageWidth}
-                                                    height={imageHeight}
-                                                    alt="figure image"
-                                                />
-                                            </figure>
-
-                                            {(item.heading || item.description) && (
-                                                <figcaption>
-                                                    {item.heading && <h4>{item.heading}</h4>}
-                                                    {item.description && <p>{item.description}</p>}
-                                                </figcaption>
-                                            )}
-                                        </div>
-                                    </>
-                                )}
                         </SwiperSlide>
                     ))}
                 </Swiper>

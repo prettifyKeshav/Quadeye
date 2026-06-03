@@ -1,0 +1,575 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.career-banner::before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.28%, rgba(0, 0, 0, 0) 82.95%);
+  bottom: 10%;
+}
+.career-banner .bg-background .container .bg-wrapper {
+  text-align: center;
+}
+.career-banner .bg-background .container .bg-wrapper h1 {
+  margin: 0 auto 15px;
+}
+.career-banner .bg-background .container .bg-wrapper p {
+  margin: 0 auto 10px;
+  max-width: 470px;
+}
+.career-banner .bg-background .container .bg-wrapper .btn {
+  margin: 30px auto 0;
+}
+
+.career-secA {
+  padding: 50px 0;
+  background: #F8FAFC;
+}
+.career-secA .heading {
+  text-align: center;
+}
+.career-secA .heading h2 {
+  margin: 0 0 10px;
+}
+.career-secA .heading p {
+  max-width: 671px;
+  margin: auto;
+}
+.career-secA .swiper-tabing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 40px;
+  gap: 40px;
+}
+.career-secA .swiper-tabing li {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #CDCDCD;
+  position: relative;
+  padding: 0 0 15px 0;
+  cursor: pointer;
+}
+.career-secA .swiper-tabing li.active {
+  color: #25ABE2;
+}
+.career-secA .swiper-tabing li.active::before {
+  width: 100%;
+}
+.career-secA .swiper-tabing li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #25ABE2;
+  transition: 0.5s ease;
+}
+.career-secA .swiper .swiper-slide {
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+.career-secA .swiper .swiper-slide h4 {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.career-secA .swiper .swiper-slide .play-btn {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.career-secA .swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.career-secA .swiper .swiper-slide.swiper-slide-active h4 {
+  opacity: 1;
+}
+.career-secA .swiper .swiper-slide.swiper-slide-active .play-btn {
+  opacity: 1;
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure {
+  height: 444px;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 40.77%);
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure figcaption {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 548px;
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure figcaption h4 {
+  line-height: 1.3;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 70px;
+}
+.career-secA .swiper .swiper-slide .benefit-slide figure figcaption .play-button {
+  text-align: center;
+}
+
+.career-secB {
+  padding: 50px 0;
+  overflow: hidden;
+}
+.career-secB .heading {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 50px;
+}
+.career-secB .heading h2 {
+  line-height: 1.1;
+}
+.career-secB .panorama-carousel {
+  --size: 380px;
+  position: relative;
+  width: 100%;
+  height: var(--size);
+  perspective: calc(var(--size) * 5.55);
+  transform-style: preserve-3d;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+.career-secB .panorama-carousel.ready {
+  opacity: 1;
+}
+.career-secB .panorama-carousel .slide {
+  position: absolute;
+  width: calc(var(--size) * 0.75);
+  height: var(--size);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+.career-secB .panorama-carousel .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.career-secC {
+  padding: 50px 0;
+}
+.career-secC .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.career-secC .custom-swiper {
+  margin: 50px 0 0 0;
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .custom-swiper {
+    margin: 30px 0 0 0;
+  }
+}
+.career-secC .custom-swiper .custom-swiper-wrapper {
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper {
+    flex-direction: column;
+  }
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide {
+  width: 20%;
+  height: 422px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.7s ease;
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide {
+    width: 100%;
+    height: 100px;
+  }
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active {
+    height: 422px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active {
+    height: 312px;
+  }
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active figcaption {
+  height: auto;
+  padding: 30px 30px;
+  gap: 30px;
+  display: initial;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active figcaption span {
+  opacity: 0;
+  scale: 0;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide.active figcaption h3 {
+  margin: 0;
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 1;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 12.36%, rgba(0, 0, 0, 0) 55.79%);
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 30px 20px;
+  z-index: 1;
+  transition: 0.7s ease;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption {
+    flex-direction: initial;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption {
+    gap: 20px;
+  }
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption span {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 25px;
+  transition: 0.7s ease;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption span img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--white);
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.7s ease;
+  transform-origin: center;
+}
+@media only screen and (max-width: 1024px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption h3 {
+    transform: rotate(0deg);
+    position: initial;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .custom-swiper .custom-swiper-wrapper .custom-swiper-slide figcaption h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    width: 90%;
+  }
+}
+
+.career-secD {
+  padding: 50px 0;
+  background: #25ABE2;
+}
+.career-secD .heading h2 {
+  text-align: center;
+  color: var(--white);
+  max-width: 474px;
+  margin: 0 auto 40px;
+  line-height: 1.1;
+}
+.career-secD .swiper-group .swiper {
+  max-width: 97%;
+}
+.career-secD .work-life-card {
+  height: 401px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  display: flex;
+}
+.career-secD .work-life-card figure {
+  width: 566px;
+  height: 100%;
+  line-height: 0;
+}
+.career-secD .work-life-card figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.career-secD .work-life-card figcaption {
+  padding: 50px 50px 50px 30px;
+  flex: 1;
+}
+.career-secD .work-life-card figcaption h3 {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.career-secD .work-life-card figcaption p {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.career-secE {
+  background: #F4F4F4;
+}
+.career-secE .heading {
+  background: var(--white);
+  padding: 50px 0;
+  text-align: center;
+}
+.career-secE .team-sec {
+  padding: 50px 0 70px 0;
+}
+.career-secE .team-sec .swiper-group .swiper .swiper-slide {
+  padding: 20px 0;
+}
+.career-secE .team-sec .swiper-group .swiper-nav {
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: 5%;
+  left: 30%;
+  transform: translate(-50%);
+  top: initial;
+}
+.career-secE .team-sec .swiper-group .swiper-nav button {
+  border: 1px solid #666666;
+  background: #F4F4F4;
+  box-shadow: none;
+}
+.career-secE .team-sec .swiper-group .swiper-nav button:hover {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+.career-secE .team-sec .swiper-group .swiper-nav button:hover svg path {
+  fill: var(--white);
+}
+.career-secE .team-sec .swiper-group .swiper-nav button svg path {
+  fill: #666666;
+}
+.career-secE .team-sec .team-card-flex {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+.career-secE .team-sec .team-card-flex .col {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.career-secE .team-sec .team-card-flex .col:first-child figure {
+  width: 63;
+  height: 63;
+  line-height: 0;
+  margin: 0 auto 20px;
+}
+.career-secE .team-sec .team-card-flex .col:first-child figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.career-secE .team-sec .team-card-flex .col:first-child p {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: var(--text);
+  max-width: 528px;
+  margin: auto;
+}
+.career-secE .team-sec .team-card-flex .col:first-child .name {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--black);
+}
+.career-secE .team-sec .team-card-flex .col:first-child .designation {
+  font-weight: 500;
+  color: rgba(102, 102, 102, 0.6980392157);
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+}
+.career-secE .team-sec .team-card-flex .col {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.career-secE .team-sec .team-card-flex .col:last-child figure {
+  line-height: 0;
+  border: 1px solid #25ABE2;
+  width: 415px;
+  height: 470px;
+  border-radius: 15px;
+  position: relative;
+}
+.career-secE .team-sec .team-card-flex .col:last-child figure img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translate(20px, 20px);
+}
+.career-secE .team-sec .team-card-flex .col:last-child figure .play-button {
+  position: absolute;
+  top: 56%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+}
+
+.career-secF {
+  padding: 50px 0;
+}
+.career-secF .heading {
+  max-width: 474px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.career-secF .heading h2 {
+  line-height: 1.1;
+}
+.career-secF .flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.career-secF .flex-box figure {
+  width: 474px;
+  height: 342px;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+}
+.career-secF .flex-box figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.career-secF .flex-box figcaption {
+  flex: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.career-secF .flex-box figcaption ul {
+  padding-left: 18px;
+}
+@media only screen and (max-width: 675px) {
+  .career-secF .flex-box figcaption ul {
+    padding-left: 10px;
+  }
+}
+.career-secF .flex-box figcaption ul li {
+  position: relative;
+  padding-left: 28px;
+  max-width: 410px;
+  line-height: 1.4;
+}
+@media only screen and (max-width: 675px) {
+  .career-secF .flex-box figcaption ul li {
+    padding-left: 20px;
+  }
+}
+.career-secF .flex-box figcaption ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.career-secF .flex-box figcaption ul li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--primary);
+}
+@media only screen and (max-width: 520px) {
+  .career-secF .flex-box figcaption ul li::before {
+    width: 6px;
+  }
+}
+.career-secF .flex-box figcaption .primary-btn {
+  padding: 10px 15px;
+}
+.career-secF .flex-box figcaption .primary-btn span {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=career.css.map */
